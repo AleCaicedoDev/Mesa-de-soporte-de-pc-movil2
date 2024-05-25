@@ -44,13 +44,13 @@ class ConfirmarContrasena extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'Código de verificación',
+                        'Nueva contraseña',
                         style: TextStyle(color: Colors.blue, fontSize: 20),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: size.height * 0.05),
                       Text(
-                        'Introduce el código de verificación en el siguiente campo:',
+                        'Introduce tu nueva contraseña:',
                         style: TextStyle(
                             color: const Color.fromARGB(255, 0, 0, 0),
                             fontSize: 15),
@@ -70,7 +70,6 @@ class ConfirmarContrasena extends StatelessWidget {
                             context,
                             TextInputType.emailAddress),
                       ),
-                      SizedBox(height: size.height * 0.02),
                       Container(
                         margin: EdgeInsets.symmetric(
                           horizontal: size.width * 0.1,

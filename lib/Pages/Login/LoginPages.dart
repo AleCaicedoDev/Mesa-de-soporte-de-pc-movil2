@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pac_movil/Pages/Home/Home.dart';
 import 'package:pac_movil/Pages/Login/RecuparContrase%C3%B1a.dart';
 
 import '../../Widget/InputRegistro.dart';
@@ -12,16 +13,20 @@ class LoginPages extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       resizeToAvoidBottomInset: false,
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('img/fondo3.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Center(
+      body: SingleChildScrollView(
+        child: Center(                                                                                                                                                                      
           child: ListView(
             children: [
+              Container(
+                height: size.height,
+                width: size.width,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('img/fondo3.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
               Container(
                 margin: EdgeInsets.only(
                   bottom: size.height * 0.01,
@@ -86,7 +91,12 @@ class LoginPages extends StatelessWidget {
                 child: SizedBox(
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Home()),
+                      );
+                    },
                     child: Text(
                       'Iniciar sesión',
                       style: TextStyle(
