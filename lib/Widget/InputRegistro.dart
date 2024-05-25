@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-
 import '../Provider/Usuarios/UsuarioFromProvider.dart';
 
 class InputRegistro {
@@ -292,9 +291,10 @@ class InputRegistro {
       String textExample,
       IconData icon,
       BuildContext context,
-      UsuariosFromProvider provider,
+      //UsuariosFromProvider provider,
       TextInputType emailAddress) {
     return Container(
+      color: Colors.white,
       margin: const EdgeInsets.only(bottom: 6),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -304,9 +304,6 @@ class InputRegistro {
             decoration: BoxDecoration(
               // color: Colors.blue,
               borderRadius: BorderRadius.circular(8),
-              border: Border.all(
-                color: const Color(0xffbf001e),
-              ),
             ),
             child: Row(
               children: [
@@ -314,20 +311,19 @@ class InputRegistro {
                   padding: const EdgeInsets.all(5),
                   child: Icon(
                     icon,
-                    color: const Color(0xffbf001e),
+                    color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
                 Expanded(
                   child: TextField(
                     obscureText: true,
                     keyboardType: emailAddress,
-                    onChanged: (value) =>
-                        provider.confirmaContrasena = value.trim(),
+                    // onChanged: (value) => provider.confirmaContrasena = value.trim(),
                     decoration: decorationInput(textLabel),
                     style: TextStyle(
                       color: Colors.grey[900],
                     ),
-                    cursorColor: const Color(0xffbf001e),
+                    cursorColor: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
               ],
@@ -434,6 +430,54 @@ class InputRegistro {
       ),
       border: InputBorder.none,
       contentPadding: const EdgeInsets.all(5),
+    );
+  }
+
+  static inputCodigoVerificacion(
+    String textLabel,
+    String textExample,
+    IconData icon,
+    BuildContext context,
+    // UsuariosFromProvider provider,
+    TextInputType num,
+  ) {
+    return Container(
+      color: Color.fromARGB(255, 255, 255, 255),
+      margin: const EdgeInsets.only(bottom: 6),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 2),
+            decoration: BoxDecoration(
+              // color: Colors.blue,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: Icon(
+                    icon,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ),
+                Expanded(
+                  child: TextField(
+                    keyboardType: num,
+                    //onChanged: (value) => provider.correo = value.trim(),
+                    decoration: decorationInput(textLabel),
+                    style: TextStyle(
+                      color: Colors.grey[900],
+                    ),
+                    cursorColor: const Color(0xffbf001e),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
