@@ -31,9 +31,8 @@ class ConfirmarContrasena extends StatelessWidget {
                   margin: EdgeInsets.only(
                     bottom: size.height * 0.005,
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  child: ListView(
+                    shrinkWrap: true,
                     children: [
                       Container(
                         height: size.height * 0.2,
@@ -92,7 +91,7 @@ class ConfirmarContrasena extends StatelessWidget {
                               Navigator.pop(context);
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.red,
+                              backgroundColor: Color.fromARGB(255, 255, 0, 0),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
