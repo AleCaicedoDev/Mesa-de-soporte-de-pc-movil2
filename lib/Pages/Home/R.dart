@@ -1,49 +1,75 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
-import 'package:pac_movil/Pages/Home/FichaTecnica.dart';
+import 'package:pac_movil/Pages/Home/FT.dart';
 import 'package:pac_movil/Widget/InputHome.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key});
+class Qr extends StatelessWidget {
+  const Qr({Key? key});
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[100],
       body: Center(
         child: ListView(
           children: [
-            SizedBox(height: size.height * 0.02),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: size.height * 0.05,
-                  height: size.height * 0.05,
-                  child: Image.asset(
-                    'img/logo.png',
-                    fit: BoxFit.cover,
+            Container(
+              height: size.height * 0.07,
+              color: Colors.white,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: size.height * 0.05,
+                        height: size.height * 0.05,
+                        child: Image.asset(
+                          'img/logo.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-                SizedBox(
-                  width: size.height * 0.05,
-                  height: size.height * 0.05,
-                  child: Image.asset(
-                    'img/usuario.png',
-                    fit: BoxFit.cover,
+                  Row(
+                    children: [
+                      SizedBox(width: size.width * 0.030),
+                      SizedBox(
+                        width: size.height * 0.05,
+                        height: size.height * 0.05,
+                        child: Image.asset(
+                          'img/ajustes.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      SizedBox(width: size.width * 0.030),
+                      SizedBox(
+                        width: size.height * 0.05,
+                        height: size.height * 0.05,
+                        child: Image.asset(
+                          'img/notificacion.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      SizedBox(width: size.width * 0.030),
+                      SizedBox(
+                        width: size.height * 0.05,
+                        height: size.height * 0.05,
+                        child: Image.asset(
+                          'img/usuario.png',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(height: size.height * 0.02),
             SizedBox(
               width: size.height * 1,
-              height: size.height * 0.35,
-              child: Image.asset(
-                'img/fondo2.png',
-                fit: BoxFit.cover,
-              ),
+              height: size.height * 0.20,
             ),
             SizedBox(height: size.height * 0.02),
             Center(

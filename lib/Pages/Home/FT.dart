@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pac_movil/Pages/Home/ingreso.dart';
+import 'package:pac_movil/Pages/Home/In.dart';
+
 class FichaTecnica extends StatelessWidget {
   const FichaTecnica({Key? key});
 
@@ -32,21 +33,48 @@ class FichaTecnica extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  width: size.height * 0.05,
-                  height: size.height * 0.05,
-                  child: Image.asset(
-                    'img/logo.png',
-                    fit: BoxFit.cover,
-                  ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: size.height * 0.05,
+                      height: size.height * 0.05,
+                      child: Image.asset(
+                        'img/logo.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  width: size.height * 0.05,
-                  height: size.height * 0.05,
-                  child: Image.asset(
-                    'img/usuario.png',
-                    fit: BoxFit.cover,
-                  ),
+                Row(
+                  children: [
+                    SizedBox(width: size.width * 0.030),
+                    SizedBox(
+                      width: size.height * 0.05,
+                      height: size.height * 0.05,
+                      child: Image.asset(
+                        'img/ajustes.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(width: size.width * 0.030),
+                    SizedBox(
+                      width: size.height * 0.05,
+                      height: size.height * 0.05,
+                      child: Image.asset(
+                        'img/notificacion.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(width: size.width * 0.030),
+                    SizedBox(
+                      width: size.height * 0.05,
+                      height: size.height * 0.05,
+                      child: Image.asset(
+                        'img/usuario.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

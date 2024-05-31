@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pac_movil/Pages/Home/Home.dart';
+import 'package:pac_movil/Pages/Home/H.dart';
 import 'package:pac_movil/Pages/Login/RecuparContrase%C3%B1a.dart';
 import '../../Widget/InputRegistro.dart';
 
@@ -25,7 +25,6 @@ class LoginPages extends StatelessWidget {
                 ),
               ),
             ),
-            // Contenido
             Center(
               child: ListView(
                 children: [
@@ -107,11 +106,8 @@ class LoginPages extends StatelessWidget {
                         ),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromARGB(255, 59, 29, 190),
-                          // Add border here (overrides default)
                           shape: RoundedRectangleBorder(
-                            // Add border radius
-                            borderRadius: BorderRadius.circular(
-                                10.0), // Set desired radius
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
                       ),

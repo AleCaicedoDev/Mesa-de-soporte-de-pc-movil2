@@ -3,34 +3,60 @@ import 'package:pac_movil/Widget/InputHome.dart';
 
 class Ingreso extends StatelessWidget {
   const Ingreso({Key? key});
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 224, 223, 223),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: Center(
         child: ListView(
           children: [
             SizedBox(height: size.height * 0.02),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: size.height * 0.05,
-                  height: size.height * 0.05,
-                  child: Image.asset(
-                    'img/logo.png',
-                    fit: BoxFit.cover,
-                  ),
+              children: [ 
+                Row(
+                  children: [
+                    SizedBox(
+                      width: size.height * 0.05,
+                      height: size.height * 0.05,
+                      child: Image.asset(
+                        'img/logo.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  width: size.height * 0.05,
-                  height: size.height * 0.05,
-                  child: Image.asset(
-                    'img/usuario.png',
-                    fit: BoxFit.cover,
-                  ),
+                Row(
+                  children: [
+                    SizedBox(width: size.width * 0.030),
+                    SizedBox(
+                      width: size.height * 0.05,
+                      height: size.height * 0.05,
+                      child: Image.asset(
+                        'img/ajustes.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(width: size.width * 0.030),
+                    SizedBox(
+                      width: size.height * 0.05,
+                      height: size.height * 0.05,
+                      child: Image.asset(
+                        'img/notificacion.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(width: size.width * 0.030),
+                    SizedBox(
+                      width: size.height * 0.05,
+                      height: size.height * 0.05,
+                      child: Image.asset(
+                        'img/usuario.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -59,9 +85,6 @@ class Ingreso extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(size.width * 0.05),
-
-
-                      
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -79,7 +102,7 @@ class Ingreso extends StatelessWidget {
                               'Descripcion',
                               'textExample',
                               context,
-                              TextInputType.text,
+                              TextInputType.text,   
                             ),
                           ),
                           SizedBox(height: size.height * 0.02),
@@ -94,7 +117,7 @@ class Ingreso extends StatelessWidget {
                           Container(
                             width: size.width * 0.9,
                             child: Inputhome.Fecha_ultima(
-                              'Descripcion',
+                              'Ultima fecha',
                               'textExample',
                               Icons.calendar_month_outlined,
                               context,
@@ -110,11 +133,14 @@ class Ingreso extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: size.height * 0.01),
-                          Text(
-                            'internet',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: size.height * 0.018,
+                          Container(
+                            width: size.width * 0.9,
+                            child: Inputhome.Fecha_ultima(
+                              'Ultima fecha',
+                              'textExample',
+                              Icons.calendar_month_outlined,
+                              context,
+                              TextInputType.datetime,
                             ),
                           ),
                           SizedBox(height: size.height * 0.02),
@@ -126,11 +152,14 @@ class Ingreso extends StatelessWidget {
                             ),
                           ),
                           SizedBox(height: size.height * 0.01),
-                          Text(
-                            'Nombre',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: size.height * 0.018,
+                          Container(
+                            width: size.width * 0.9,
+                            child: Inputhome.Fecha_ultima(
+                              'Ultima fecha',
+                              'textExample',
+                              Icons.calendar_month_outlined,
+                              context,
+                              TextInputType.datetime,
                             ),
                           ),
                         ],
