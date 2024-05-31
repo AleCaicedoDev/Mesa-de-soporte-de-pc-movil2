@@ -176,16 +176,21 @@ class Home extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.02),
             Padding(
-              padding: EdgeInsets.all(10), // Espacio alrededor del contenedor
+              padding: EdgeInsets.all(10),
               child: Container(
-                color: Colors.white,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.white,
+                ),
                 child: Column(
                   children: [
+                    SizedBox(height: 20),
                     Row(
                       children: [
                         Container(
                           padding: EdgeInsets.only(
-                              left: size.width * 0.02), // Margen a la izquierda
+                              left:
+                                  size.width * 0.0290), // Margen a la izquierda
                           child: Row(
                             children: [
                               Icon(
@@ -207,7 +212,7 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 20),
                     Container(
                       alignment: Alignment.topLeft,
                       width: size.width * 0.90,
@@ -227,6 +232,27 @@ class Home extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.person,
+                                        color: Colors.black,
+                                      ), // Icono de reportes
+                                      SizedBox(
+                                          width:
+                                              10), // Espaciado entre el icono y el texto
+                                      Text(
+                                        'Sergio granada ', // Texto "Mis Reportes"
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(height: 10),
                                 Row(
                                   children: [
                                     SizedBox(width: size.width * 0.02),
@@ -238,7 +264,7 @@ class Home extends StatelessWidget {
                                         fontSize: size.height * 0.015,
                                       ),
                                     ),
-                                    SizedBox(width: size.width * 0.10),
+                                    SizedBox(width: size.width * 0.05),
                                     Text(
                                       'Analista', // Información del cargo
                                       style: TextStyle(
@@ -250,7 +276,7 @@ class Home extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: size.height * 0.01),
+                                SizedBox(height: size.height * 0.0001),
                                 Row(
                                   children: [
                                     SizedBox(width: size.width * 0.02),
@@ -262,7 +288,7 @@ class Home extends StatelessWidget {
                                         fontSize: size.height * 0.015,
                                       ),
                                     ),
-                                    SizedBox(width: size.width * 0.09),
+                                    SizedBox(width: size.width * 0.04),
                                     Text(
                                       'j.raigoza43@misena.edu.co', // Información del costo
                                       style: TextStyle(
@@ -274,7 +300,7 @@ class Home extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: size.height * 0.01),
+                                SizedBox(height: size.height * 0.0001),
                                 Row(
                                   children: [
                                     SizedBox(width: size.width * 0.02),
@@ -286,7 +312,7 @@ class Home extends StatelessWidget {
                                         fontSize: size.height * 0.015,
                                       ),
                                     ),
-                                    SizedBox(width: size.width * 0.10),
+                                    SizedBox(width: size.width * 0.055),
                                     Text(
                                       '31/05/2024', // Información del correo electrónico
                                       style: TextStyle(
@@ -298,7 +324,7 @@ class Home extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: size.height * 0.01),
+                                SizedBox(height: size.height * 0.0001),
                                 Row(
                                   children: [
                                     SizedBox(width: size.width * 0.02),
@@ -310,7 +336,7 @@ class Home extends StatelessWidget {
                                         fontSize: size.height * 0.015,
                                       ),
                                     ),
-                                    SizedBox(width: size.width * 0.11),
+                                    SizedBox(width: size.width * 0.06),
                                     Text(
                                       'Internet', // Información del costo
                                       style: TextStyle(
@@ -331,6 +357,7 @@ class Home extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
+                                SizedBox(height: size.height * 0.030),
                                 Text(
                                   'Estado', // Texto "Estado"
                                   style: TextStyle(
@@ -340,7 +367,7 @@ class Home extends StatelessWidget {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                SizedBox(height: size.height * 0.01),
+                                SizedBox(height: size.height * 0.001),
                                 SizedBox(
                                   width: size.width * 1,
                                   height: size.height * 0.04,
@@ -353,10 +380,14 @@ class Home extends StatelessWidget {
                                       backgroundColor: Colors.blue,
                                     ),
                                     child: Text(
-                                      'Terminado',
+                                      'terminado',
                                       style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: size.height * 0.010,
+                                        fontSize: size.height * 0.010
+                                        
+                                        
+                                        
+                                        ,
                                       ),
                                     ),
                                   ),
