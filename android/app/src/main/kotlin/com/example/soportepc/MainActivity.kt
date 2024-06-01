@@ -1,4 +1,4 @@
-package com.example.pac_movil
+package com.example.soportepc
 
 import io.flutter.embedding.android.FlutterActivity
 

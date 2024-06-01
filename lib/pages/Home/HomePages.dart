@@ -1,21 +1,57 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:pac_movil/Pages/Home/CodigoQr.dart';
-import 'package:pac_movil/Widget/InputHome.dart';
+import 'package:flutter/widgets.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key});
+import '../CodigoQR/CodigoQRPages.dart';
+
+class HomePages extends StatelessWidget {
+  const HomePages({Key? key});
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.grey[100],
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        // elevation: 5,
+        shadowColor: Colors.black,
+        surfaceTintColor: Colors.white,
+        actions: [
+          SizedBox(
+            width: size.height * 0.05,
+            height: size.height * 0.05,
+            child: Image.asset(
+              'img/ajustes.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: size.width * 0.03),
+            width: size.height * 0.05,
+            height: size.height * 0.05,
+            child: Image.asset(
+              'img/notificacion.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(right: size.width * 0.03),
+            width: size.height * 0.05,
+            height: size.height * 0.05,
+            child: Image.asset(
+              'img/usuario.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => CodigoQr()),
+            MaterialPageRoute(builder: (context) => CodigoQRPages()),
           );
         },
         backgroundColor: Colors.blue,
@@ -31,58 +67,6 @@ class Home extends StatelessWidget {
       body: Center(
         child: ListView(
           children: [
-            Container(
-              height: size.height * 0.07,
-              color: Colors.white,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: size.height * 0.05,
-                        height: size.height * 0.05,
-                        child: Image.asset(
-                          'img/logo.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(width: size.width * 0.030),
-                      SizedBox(
-                        width: size.height * 0.05,
-                        height: size.height * 0.05,
-                        child: Image.asset(
-                          'img/ajustes.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      SizedBox(width: size.width * 0.030),
-                      SizedBox(
-                        width: size.height * 0.05,
-                        height: size.height * 0.05,
-                        child: Image.asset(
-                          'img/notificacion.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      SizedBox(width: size.width * 0.030),
-                      SizedBox(
-                        width: size.height * 0.05,
-                        height: size.height * 0.05,
-                        child: Image.asset(
-                          'img/usuario.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
             SizedBox(height: size.height * 0.02),
             Center(
               child: Column(
@@ -366,9 +350,9 @@ class Home extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(height: size.height * 0.001),
-                                SizedBox(
-                                  width: size.width * 1,
-                                  height: size.height * 0.04,
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: 15, vertical: 5),
                                   child: ElevatedButton(
                                     onPressed: () {},
                                     style: ElevatedButton.styleFrom(

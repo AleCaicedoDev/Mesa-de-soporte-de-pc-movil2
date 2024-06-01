@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pac_movil/Pages/Login/ConfrmarContrase%C3%B1a.dart';
 
-import '../../Widget/InputRegistro.dart';
+import '../Widget/InputRegistro.dart';
+import 'ConfrmarContraseña.dart';
+
 
 class Codigoverficacion extends StatelessWidget {
   const Codigoverficacion({super.key});

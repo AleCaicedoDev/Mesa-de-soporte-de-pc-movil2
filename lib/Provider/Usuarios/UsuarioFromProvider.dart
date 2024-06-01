@@ -1,7 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/cupertino.dart';
-import 'package:pac_movil/Widget/notificationService.dart';
+
+import '../../pages/Widget/notificationService.dart';
+
 
 class UsuariosFromProvider extends ChangeNotifier {
   GlobalKey<FormState> fromkey = GlobalKey<FormState>();

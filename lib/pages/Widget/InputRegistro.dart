@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import '../Provider/Usuarios/UsuarioFromProvider.dart';
+
+import '../../provider/Usuarios/UsuarioFromProvider.dart';
 
 class InputRegistro {
   static inputNombre(String textLabel, String textExample, IconData icon,

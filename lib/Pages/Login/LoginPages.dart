@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pac_movil/Pages/Home/Home.dart';
-import 'package:pac_movil/Pages/Login/RecuparContrase%C3%B1a.dart';
-import '../../Widget/InputRegistro.dart';
+
+import '../Home/HomePages.dart';
+import '../Widget/InputRegistro.dart';
+import 'RecuparContraseña.dart';
 
 class LoginPages extends StatelessWidget {
   const LoginPages({Key? key});
@@ -95,7 +96,8 @@ class LoginPages extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Home()),
+                            MaterialPageRoute(
+                                builder: (context) => HomePages()),
                           );
                         },
                         child: Text(

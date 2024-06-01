@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pac_movil/Pages/Home/In.dart';
 
-class FichaTecnicaPage extends StatelessWidget {
-  const FichaTecnicaPage({Key? key});
+import '../Reportes/ReportePages.dart';
+
+
+class FichaTecnicaPages extends StatelessWidget {
+  const FichaTecnicaPages({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class FichaTecnicaPage extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Ingreso()),
+            MaterialPageRoute(builder: (context) => ReportePages()),
           );
         },
         backgroundColor: Colors.blue, // Establece el color de fondo del botón

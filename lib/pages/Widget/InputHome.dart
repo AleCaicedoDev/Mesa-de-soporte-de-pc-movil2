@@ -1,6 +1,6 @@
-import 'package:dio/dio.dart';
+
 import 'package:flutter/material.dart';
-import '../Provider/Usuarios/UsuarioFromProvider.dart';
+
 
 class Inputhome {
   static inputBarras(

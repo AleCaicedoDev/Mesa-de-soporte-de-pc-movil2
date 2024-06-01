@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pac_movil/Widget/InputHome.dart';
 
-class Ingreso extends StatelessWidget {
-  const Ingreso({Key? key});
+import '../Widget/InputHome.dart';
+
+
+class ReportePages extends StatelessWidget {
+  const ReportePages({Key? key});
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -14,7 +16,7 @@ class Ingreso extends StatelessWidget {
             SizedBox(height: size.height * 0.02),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [ 
+              children: [
                 Row(
                   children: [
                     SizedBox(
@@ -102,7 +104,7 @@ class Ingreso extends StatelessWidget {
                               'Descripcion',
                               'textExample',
                               context,
-                              TextInputType.text,   
+                              TextInputType.text,
                             ),
                           ),
                           SizedBox(height: size.height * 0.02),

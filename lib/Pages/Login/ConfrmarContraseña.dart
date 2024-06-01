@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../Widget/InputRegistro.dart';
+
+import '../Widget/InputRegistro.dart';
 
 class ConfirmarContrasena extends StatelessWidget {
   const ConfirmarContrasena({super.key});
