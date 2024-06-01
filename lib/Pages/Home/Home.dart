@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
-import 'package:pac_movil/Pages/Home/FT.dart';
-import 'package:pac_movil/Pages/Home/R.dart';
+import 'package:pac_movil/Pages/Home/CodigoQr.dart';
 import 'package:pac_movil/Widget/InputHome.dart';
 
 class Home extends StatelessWidget {
@@ -17,7 +15,7 @@ class Home extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Qr()),
+            MaterialPageRoute(builder: (context) => CodigoQr()),
           );
         },
         backgroundColor: Colors.blue,
@@ -383,11 +381,7 @@ class Home extends StatelessWidget {
                                       'terminado',
                                       style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: size.height * 0.010
-                                        
-                                        
-                                        
-                                        ,
+                                        fontSize: size.height * 0.010,
                                       ),
                                     ),
                                   ),

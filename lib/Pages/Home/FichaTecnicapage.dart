@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pac_movil/Pages/Home/In.dart';
 
-class FichaTecnica extends StatelessWidget {
-  const FichaTecnica({Key? key});
+class FichaTecnicaPage extends StatelessWidget {
+  const FichaTecnicaPage({Key? key});
 
   @override
   Widget build(BuildContext context) {

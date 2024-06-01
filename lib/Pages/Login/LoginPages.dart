@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pac_movil/Pages/Home/H.dart';
+import 'package:pac_movil/Pages/Home/Home.dart';
 import 'package:pac_movil/Pages/Login/RecuparContrase%C3%B1a.dart';
 import '../../Widget/InputRegistro.dart';
 

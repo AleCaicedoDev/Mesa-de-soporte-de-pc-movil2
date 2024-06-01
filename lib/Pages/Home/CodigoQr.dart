@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
-import 'package:pac_movil/Pages/Home/FT.dart';
+
+import 'package:pac_movil/Pages/Home/FichaTecnicapage.dart';
 import 'package:pac_movil/Widget/InputHome.dart';
 
-class Qr extends StatelessWidget {
-  const Qr({Key? key});
+class CodigoQr extends StatelessWidget {
+  const CodigoQr({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +128,8 @@ class Qr extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => FichaTecnica()),
+                        MaterialPageRoute(
+                            builder: (context) => FichaTecnicaPage()),
                       );
                     },
                     child: Text(
