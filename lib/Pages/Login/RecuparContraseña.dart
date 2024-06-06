@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../Widget/InputRegistro.dart';
 import 'CodigoVerificacion.dart';
 
-
 class RecuperarContrasena extends StatelessWidget {
   const RecuperarContrasena({super.key});
 

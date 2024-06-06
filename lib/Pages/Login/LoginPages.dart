@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Home/HomePages.dart';
 import '../Widget/InputRegistro.dart';
-import 'RecuparContraseña.dart';
 
 class LoginPages extends StatelessWidget {
   const LoginPages({Key? key});
@@ -19,7 +17,7 @@ class LoginPages extends StatelessWidget {
             Container(
               height: size.height,
               width: size.width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('img/fondo3.png'),
                   fit: BoxFit.cover,
@@ -35,7 +33,7 @@ class LoginPages extends StatelessWidget {
                       top: size.height * 0.212,
                     ),
                     height: size.height * 0.2,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('img/logo.png'),
                       ),
@@ -71,13 +69,9 @@ class LoginPages extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => RecuperarContrasena()),
-                      );
+                      Navigator.pushNamed(context, 'RecuperarContrasena');
                     },
-                    child: Text(
+                    child: const Text(
                       '¿Olvidaste tu contraseña?',
                       style: TextStyle(
                         color: Colors.black,
@@ -94,22 +88,19 @@ class LoginPages extends StatelessWidget {
                       height: 40,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePages()),
-                          );
+                          Navigator.pushNamed(context, 'HomePages');
                         },
-                        child: Text(
-                          'Iniciar sesión',
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                          ),
-                        ),
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 59, 29, 190),
+                          backgroundColor:
+                              const Color.fromARGB(255, 59, 29, 190),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                        child: const Text(
+                          'Iniciar sesión',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
                           ),
                         ),
                       ),
